@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧账本 - 交互原型</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #F5F7FA;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #4A6CF7, #6E8CFF);
+            color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(74, 108, 247, 0.15);
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 30px 0 20px;
+            color: #4A6CF7;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .screen-item {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .screen-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .screen-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .screen-info {
+            padding: 15px;
+        }
+        
+        .screen-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .screen-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: auto;
+            max-width: 390px;
+            width: 100%;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-button {
+            background-color: #4A6CF7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(74, 108, 247, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: #6E8CFF;
+        }
+        
+        .hotspot {
+            position: absolute;
+            background-color: rgba(74, 108, 247, 0.2);
+            border: 2px solid #4A6CF7;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hotspot:hover {
+            background-color: rgba(74, 108, 247, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智慧账本 - 交互原型</h1>
+            <p>基于SVG设计稿的交互式原型展示</p>
+        </header>
+        
+        <h2>界面预览</h2>
+        <p>点击下方任意界面进入交互模式，体验智慧账本APP的界面流程。</p>
+        
+        <div class="screens-grid">
+            <div class="screen-item" onclick="openModal('onboarding-page.svg', '启动页/引导页')">
+                <img src="onboarding-page.svg" alt="启动页/引导页" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">启动页/引导页</div>
+                    <div class="screen-desc">APP首次启动时展示的品牌页面</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('login-page.svg', '登录页面')">
+                <img src="login-page.svg" alt="登录页面" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">登录页面</div>
+                    <div class="screen-desc">用户登录界面</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('register-page.svg', '注册页面')">
+                <img src="register-page.svg" alt="注册页面" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">注册页面</div>
+                    <div class="screen-desc">新用户注册界面</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('dashboard-page.svg', '首页/仪表盘')">
+                <img src="dashboard-page.svg" alt="首页/仪表盘" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">首页/仪表盘</div>
+                    <div class="screen-desc">展示财务概览和AI洞察</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('record-page.svg', '记账界面')">
+                <img src="record-page.svg" alt="记账界面" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">记账界面</div>
+                    <div class="screen-desc">智能记账系统</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('statistics-page.svg', '统计分析界面')">
+                <img src="statistics-page.svg" alt="统计分析界面" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">统计分析界面</div>
+                    <div class="screen-desc">财务数据可视化</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('ai-assistant-page.svg', 'AI财务助手')">
+                <img src="ai-assistant-page.svg" alt="AI财务助手" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">AI财务助手</div>
+                    <div class="screen-desc">智能财务分析与建议</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('budget-page.svg', '预算管理')">
+                <img src="budget-page.svg" alt="预算管理" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">预算管理</div>
+                    <div class="screen-desc">设置和跟踪预算</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('family-page.svg', '家庭协作')">
+                <img src="family-page.svg" alt="家庭协作" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">家庭协作</div>
+                    <div class="screen-desc">家庭成员共同理财</div>
+                </div>
+            </div>
+            
+            <div class="screen-item" onclick="openModal('profile-page.svg', '个人中心')">
+                <img src="profile-page.svg" alt="个人中心" class="screen-image">
+                <div class="screen-info">
+                    <div class="screen-title">个人中心</div>
+                    <div class="screen-desc">用户信息和设置</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>交互说明</h2>
+        <p>在交互模式下，您可以点击界面上的热区（高亮区域）进行页面跳转，体验完整的用户流程。也可以使用底部的导航按钮切换到其他相关页面。</p>
+        
+        <footer>
+            <p>© 2023 智慧账本 - 产品设计原型</p>
+        </footer>
+    </div>
+    
+    <div id="screenModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="" class="modal-image">
+            <div id="hotspots"></div>
+        </div>
+        <div class="navigation" id="navigation"></div>
+    </div>
+    
+    <script>
+        // 页面流程定义
+        const pageFlows = {
+            'onboarding-page.svg': {
+                title: '启动页/引导页',
+                hotspots: [
+                    { x: 48, y: 640, width: 294, height: 56, target: 'login-page.svg', desc: '登录按钮' },
+                    { x: 48, y: 712, width: 294, height: 56, target: 'register-page.svg', desc: '注册按钮' }
+                ],
+                relatedPages: ['login-page.svg', 'register-page.svg']
+            },
+            'login-page.svg': {
+                title: '登录页面',
+                hotspots: [
+                    { x: 48, y: 640, width: 294, height: 56, target: 'dashboard-page.svg', desc: '登录按钮' },
+                    { x: 195, y: 712, width: 150, height: 20, target: 'register-page.svg', desc: '注册账号' }
+                ],
+                relatedPages: ['onboarding-page.svg', 'dashboard-page.svg', 'register-page.svg']
+            },
+            'register-page.svg': {
+                title: '注册页面',
+                hotspots: [
+                    { x: 48, y: 640, width: 294, height: 56, target: 'dashboard-page.svg', desc: '注册按钮' },
+                    { x: 240, y: 720, width: 100, height: 20, target: 'login-page.svg', desc: '立即登录' }
+                ],
+                relatedPages: ['onboarding-page.svg', 'login-page.svg', 'dashboard-page.svg']
+            },
+            'dashboard-page.svg': {
+                title: '首页/仪表盘',
+                hotspots: [
+                    { x: 126, y: 796, width: 40, height: 40, target: 'record-page.svg', desc: '记账按钮' },
+                    { x: 190, y: 810, width: 40, height: 30, target: 'statistics-page.svg', desc: '报表' },
+                    { x: 264, y: 810, width: 40, height: 30, target: 'ai-assistant-page.svg', desc: '发现' },
+                    { x: 342, y: 810, width: 40, height: 30, target: 'profile-page.svg', desc: '我的' },
+                    { x: 24, y: 236, width: 342, height: 120, target: 'budget-page.svg', desc: '预算卡片' }
+                ],
+                relatedPages: ['record-page.svg', 'statistics-page.svg', 'ai-assistant-page.svg', 'profile-page.svg', 'budget-page.svg']
+            },
+            'record-page.svg': {
+                title: '记账界面',
+                hotspots: [
+                    { x: 24, y: 764, width: 342, height: 56, target: 'dashboard-page.svg', desc: '保存按钮' },
+                    { x: 0, y: 788, width: 390, height: 56, target: 'dashboard-page.svg', desc: '底部导航栏' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'statistics-page.svg']
+            },
+            'statistics-page.svg': {
+                title: '统计分析界面',
+                hotspots: [
+                    { x: 48, y: 816, width: 40, height: 30, target: 'dashboard-page.svg', desc: '首页' },
+                    { x: 126, y: 796, width: 40, height: 40, target: 'record-page.svg', desc: '记账' },
+                    { x: 264, y: 816, width: 40, height: 30, target: 'ai-assistant-page.svg', desc: '发现' },
+                    { x: 342, y: 816, width: 40, height: 30, target: 'profile-page.svg', desc: '我的' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'record-page.svg', 'ai-assistant-page.svg', 'profile-page.svg']
+            },
+            'ai-assistant-page.svg': {
+                title: 'AI财务助手',
+                hotspots: [
+                    { x: 48, y: 816, width: 40, height: 30, target: 'dashboard-page.svg', desc: '首页' },
+                    { x: 126, y: 796, width: 40, height: 40, target: 'record-page.svg', desc: '记账' },
+                    { x: 195, y: 816, width: 40, height: 30, target: 'statistics-page.svg', desc: '报表' },
+                    { x: 342, y: 816, width: 40, height: 30, target: 'profile-page.svg', desc: '我的' },
+                    { x: 24, y: 360, width: 342, height: 180, target: 'statistics-page.svg', desc: '月度财务分析' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'record-page.svg', 'statistics-page.svg', 'profile-page.svg']
+            },
+            'budget-page.svg': {
+                title: '预算管理',
+                hotspots: [
+                    { x: 48, y: 816, width: 40, height: 30, target: 'dashboard-page.svg', desc: '首页' },
+                    { x: 126, y: 796, width: 40, height: 40, target: 'record-page.svg', desc: '记账' },
+                    { x: 195, y: 816, width: 40, height: 30, target: 'statistics-page.svg', desc: '报表' },
+                    { x: 264, y: 816, width: 40, height: 30, target: 'ai-assistant-page.svg', desc: '发现' },
+                    { x: 24, y: 724, width: 342, height: 56, target: 'dashboard-page.svg', desc: '添加预算分类' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'record-page.svg', 'statistics-page.svg', 'ai-assistant-page.svg']
+            },
+            'family-page.svg': {
+                title: '家庭协作',
+                hotspots: [
+                    { x: 24, y: 772, width: 342, height: 56, target: 'dashboard-page.svg', desc: '创建共享账本' },
+                    { x: 24, y: 284, width: 342, height: 80, target: 'record-page.svg', desc: '家庭日常账本' },
+                    { x: 24, y: 380, width: 342, height: 80, target: 'budget-page.svg', desc: '旅行基金' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'profile-page.svg', 'record-page.svg']
+            },
+            'profile-page.svg': {
+                title: '个人中心',
+                hotspots: [
+                    { x: 24, y: 252, width: 342, height: 120, target: 'family-page.svg', desc: '我的家庭' },
+                    { x: 24, y: 452, width: 342, height: 56, target: 'budget-page.svg', desc: '预算设置' },
+                    { x: 24, y: 780, width: 342, height: 48, target: 'login-page.svg', desc: '退出登录' },
+                    { x: 48, y: 816, width: 40, height: 30, target: 'dashboard-page.svg', desc: '首页' },
+                    { x: 126, y: 796, width: 40, height: 40, target: 'record-page.svg', desc: '记账' },
+                    { x: 195, y: 816, width: 40, height: 30, target: 'statistics-page.svg', desc: '报表' },
+                    { x: 264, y: 816, width: 40, height: 30, target: 'ai-assistant-page.svg', desc: '发现' }
+                ],
+                relatedPages: ['dashboard-page.svg', 'family-page.svg', 'budget-page.svg', 'login-page.svg']
+            }
+        };
+        
+        // 打开模态框
+        function openModal(imageSrc, title) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('screenModal').style.display = 'block';
+            
+            // 清除现有热区
+            document.getElementById('hotspots').innerHTML = '';
+            
+            // 添加热区
+            if (pageFlows[imageSrc]) {
+                const hotspots = pageFlows[imageSrc].hotspots;
+                const hotspotsContainer = document.getElementById('hotspots');
+                
+                hotspots.forEach(spot => {
+                    const hotspot = document.createElement('div');
+                    hotspot.className = 'hotspot';
+                    hotspot.style.left = spot.x + 'px';
+                    hotspot.style.top = spot.y + 'px';
+                    hotspot.style.width = spot.width + 'px';
+                    hotspot.style.height = spot.height + 'px';
+                    hotspot.title = spot.desc;
+                    hotspot.onclick = function() {
+                        openModal(spot.target, pageFlows[spot.target].title);
+                    };
+                    hotspotsContainer.appendChild(hotspot);
+                });
+                
+                // 添加导航按钮
+                const navigation = document.getElementById('navigation');
+                navigation.innerHTML = '';
+                
+                if (pageFlows[imageSrc].relatedPages) {
+                    pageFlows[imageSrc].relatedPages.forEach(page => {
+                        if (page !== imageSrc) {
+                            const button = document.createElement('button');
+                            button.className = 'nav-button';
+                            button.textContent = pageFlows[page].title;
+                            button.onclick = function() {
+                                openModal(page, pageFlows[page].title);
+                            };
+                            navigation.appendChild(button);
+                        }
+                    });
+                }
+            }
+        }
+        
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('screenModal').style.display = 'none';
+        }
+        
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('screenModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
