@@ -1,0 +1,123 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F7FA" />
+      <stop offset="100%" stop-color="#F0F4FF" />
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A6CF7" />
+      <stop offset="100%" stop-color="#6E8CFF" />
+    </linearGradient>
+    <linearGradient id="incomeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2ED573" />
+      <stop offset="100%" stop-color="#7EFFB2" />
+    </linearGradient>
+    <linearGradient id="expenseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#FFAAAA" />
+    </linearGradient>
+    <filter id="dropShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4A6CF7" flood-opacity="0.15"/>
+    </filter>
+    <filter id="cardShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="390" height="844" fill="url(#bgGradient)" />
+  
+  <!-- 状态栏 -->
+  <rect x="0" y="0" width="390" height="44" fill="transparent" />
+  <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" fill="#333333">9:41</text>
+  <text x="366" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#333333" text-anchor="end">100%</text>
+  
+  <!-- 顶部导航栏 -->
+  <rect x="0" y="44" width="390" height="56" fill="white" />
+  <text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="18" font-weight="600" fill="#333333">记一笔</text>
+  <circle cx="350" cy="72" r="20" fill="#F5F7FA" />
+  <path d="M345 72L355 72" stroke="#666666" stroke-width="2" stroke-linecap="round" />
+  <path d="M350 67L350 77" stroke="#666666" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- 收支类型切换 -->
+  <rect x="24" y="116" width="342" height="48" rx="24" fill="#F5F7FA" />
+  <rect x="24" y="116" width="171" height="48" rx="24" fill="url(#expenseGradient)" />
+  <text x="109" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle">支出</text>
+  <text x="280" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#666666" text-anchor="middle">收入</text>
+  
+  <!-- 金额输入区 -->
+  <text x="48" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#666666">金额</text>
+  <text x="48" y="240" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace" font-size="36" font-weight="800" fill="#333333">¥ 128.50</text>
+  <line x1="48" y1="260" x2="342" y2="260" stroke="#E1E4E8" stroke-width="1" />
+  
+  <!-- 多模态输入切换 -->
+  <rect x="24" y="280" width="342" height="48" rx="8" fill="white" filter="url(#cardShadow)" />
+  <rect x="24" y="280" width="114" height="48" rx="8" fill="#4A6CF7" />
+  <text x="81" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="white" text-anchor="middle">手动</text>
+  <text x="195" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">语音</text>
+  <text x="309" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">扫票</text>
+  
+  <!-- 分类选择 -->
+  <text x="24" y="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">分类</text>
+  
+  <!-- 分类图标行1 -->
+  <circle cx="48" cy="400" r="24" fill="#F5F7FA" />
+  <text x="48" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#FF6B6B" text-anchor="middle">餐</text>
+  <text x="48" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">餐饮</text>
+  
+  <circle cx="112" cy="400" r="24" fill="#F5F7FA" />
+  <text x="112" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#FF9F43" text-anchor="middle">购</text>
+  <text x="112" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">购物</text>
+  
+  <circle cx="176" cy="400" r="24" fill="#F5F7FA" />
+  <text x="176" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#54A0FF" text-anchor="middle">交</text>
+  <text x="176" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">交通</text>
+  
+  <circle cx="240" cy="400" r="24" fill="#F5F7FA" />
+  <text x="240" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#A367DC" text-anchor="middle">娱</text>
+  <text x="240" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">娱乐</text>
+  
+  <circle cx="304" cy="400" r="24" fill="#F5F7FA" />
+  <text x="304" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#2ED573" text-anchor="middle">居</text>
+  <text x="304" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">居家</text>
+  
+  <!-- 分类图标行2 -->
+  <circle cx="48" cy="480" r="24" fill="#F5F7FA" />
+  <text x="48" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#FF6B6B" text-anchor="middle">医</text>
+  <text x="48" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">医疗</text>
+  
+  <circle cx="112" cy="480" r="24" fill="#F5F7FA" />
+  <text x="112" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#FF9F43" text-anchor="middle">学</text>
+  <text x="112" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">学习</text>
+  
+  <circle cx="176" cy="480" r="24" fill="#F5F7FA" />
+  <text x="176" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#54A0FF" text-anchor="middle">数</text>
+  <text x="176" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">数码</text>
+  
+  <circle cx="240" cy="480" r="24" fill="#F5F7FA" />
+  <text x="240" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#A367DC" text-anchor="middle">服</text>
+  <text x="240" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">服饰</text>
+  
+  <circle cx="304" cy="480" r="24" fill="#F5F7FA" />
+  <text x="304" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#2ED573" text-anchor="middle">更</text>
+  <text x="304" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#666666" text-anchor="middle">更多</text>
+  
+  <!-- 日期选择 -->
+  <rect x="24" y="540" width="342" height="56" rx="8" fill="white" filter="url(#cardShadow)" />
+  <text x="48" y="576" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#333333">日期</text>
+  <text x="318" y="576" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#4A6CF7" text-anchor="end">今天</text>
+  
+  <!-- 备注输入 -->
+  <rect x="24" y="612" width="342" height="56" rx="8" fill="white" filter="url(#cardShadow)" />
+  <text x="48" y="648" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#999999">添加备注...</text>
+  
+  <!-- 关联家庭成员 -->
+  <rect x="24" y="684" width="342" height="56" rx="8" fill="white" filter="url(#cardShadow)" />
+  <text x="48" y="720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#333333">关联家庭成员</text>
+  <text x="318" y="720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#4A6CF7" text-anchor="end">选择</text>
+  
+  <!-- 保存按钮 -->
+  <rect x="24" y="764" width="342" height="56" rx="28" fill="url(#buttonGradient)" filter="url(#dropShadow)" />
+  <text x="195" y="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle">保存</text>
+</svg>

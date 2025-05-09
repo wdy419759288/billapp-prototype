@@ -1,0 +1,136 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F7FA" />
+      <stop offset="100%" stop-color="#F0F4FF" />
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A6CF7" />
+      <stop offset="100%" stop-color="#6E8CFF" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A6CF7" opacity="0.05" />
+      <stop offset="100%" stop-color="#6E8CFF" opacity="0.1" />
+    </linearGradient>
+    <filter id="dropShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4A6CF7" flood-opacity="0.15"/>
+    </filter>
+    <filter id="cardShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="390" height="844" fill="url(#bgGradient)" />
+  
+  <!-- 状态栏 -->
+  <rect x="0" y="0" width="390" height="44" fill="transparent" />
+  <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" fill="#333333">9:41</text>
+  <text x="366" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#333333" text-anchor="end">100%</text>
+  
+  <!-- 顶部导航栏 -->
+  <rect x="0" y="44" width="390" height="56" fill="white" />
+  <text x="24" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="18" font-weight="600" fill="#333333">家庭协作</text>
+  <circle cx="350" cy="72" r="20" fill="#F5F7FA" />
+  <path d="M342 72L358 72" stroke="#666666" stroke-width="2" stroke-linecap="round" />
+  <path d="M350 64L350 80" stroke="#666666" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- 家庭信息卡片 -->
+  <rect x="24" y="116" width="342" height="120" rx="16" fill="white" filter="url(#cardShadow)" />
+  <text x="48" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">小明的家</text>
+  
+  <!-- 家庭成员 -->
+  <text x="48" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">家庭成员 (4)</text>
+  
+  <!-- 成员头像 -->
+  <circle cx="64" cy="204" r="16" fill="#4A6CF7" />
+  <text x="64" y="209" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">张</text>
+  
+  <circle cx="104" cy="204" r="16" fill="#FF9F43" />
+  <text x="104" y="209" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">李</text>
+  
+  <circle cx="144" cy="204" r="16" fill="#2ED573" />
+  <text x="144" y="209" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">小</text>
+  
+  <circle cx="184" cy="204" r="16" fill="#FF6B6B" />
+  <text x="184" y="209" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">小</text>
+  
+  <!-- 邀请按钮 -->
+  <rect x="240" y="192" width="102" height="24" rx="12" fill="#F5F7FA" />
+  <text x="291" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#4A6CF7" text-anchor="middle">邀请成员</text>
+  
+  <!-- 共享账本标题 -->
+  <text x="24" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">共享账本</text>
+  
+  <!-- 共享账本卡片1 -->
+  <rect x="24" y="284" width="342" height="80" rx="16" fill="white" filter="url(#cardShadow)" />
+  
+  <!-- 账本图标 -->
+  <rect x="48" y="304" width="40" height="40" rx="8" fill="url(#cardGradient)" />
+  <text x="68" y="329" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#4A6CF7" text-anchor="middle">家</text>
+  
+  <!-- 账本名称和描述 -->
+  <text x="104" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">家庭日常</text>
+  <text x="104" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">4人共享 · 本月支出 ¥5,280</text>
+  
+  <!-- 查看按钮 -->
+  <rect x="280" y="312" width="64" height="24" rx="12" fill="#F5F7FA" />
+  <text x="312" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#4A6CF7" text-anchor="middle">查看</text>
+  
+  <!-- 共享账本卡片2 -->
+  <rect x="24" y="380" width="342" height="80" rx="16" fill="white" filter="url(#cardShadow)" />
+  
+  <!-- 账本图标 -->
+  <rect x="48" y="400" width="40" height="40" rx="8" fill="url(#cardGradient)" />
+  <text x="68" y="425" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#4A6CF7" text-anchor="middle">旅</text>
+  
+  <!-- 账本名称和描述 -->
+  <text x="104" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">旅行基金</text>
+  <text x="104" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">2人共享 · 累计储蓄 ¥12,800</text>
+  
+  <!-- 查看按钮 -->
+  <rect x="280" y="408" width="64" height="24" rx="12" fill="#F5F7FA" />
+  <text x="312" y="424" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#4A6CF7" text-anchor="middle">查看</text>
+  
+  <!-- 家庭目标标题 -->
+  <text x="24" y="492" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">家庭目标</text>
+  
+  <!-- 家庭目标卡片 -->
+  <rect x="24" y="508" width="342" height="120" rx="16" fill="white" filter="url(#cardShadow)" />
+  
+  <!-- 目标名称 -->
+  <text x="48" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">泰国旅行</text>
+  
+  <!-- 目标金额 -->
+  <text x="48" y="564" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">目标: ¥20,000</text>
+  
+  <!-- 目标进度 -->
+  <text x="48" y="588" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">已存: ¥12,800 (64%)</text>
+  
+  <!-- 目标进度条 -->
+  <rect x="48" y="604" width="294" height="8" rx="4" fill="#F5F7FA" />
+  <rect x="48" y="604" width="188" height="8" rx="4" fill="url(#buttonGradient)" />
+  
+  <!-- 账单分摊标题 -->
+  <text x="24" y="660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">账单分摊</text>
+  
+  <!-- 账单分摊卡片 -->
+  <rect x="24" y="676" width="342" height="80" rx="16" fill="white" filter="url(#cardShadow)" />
+  
+  <!-- 分摊图标 -->
+  <rect x="48" y="696" width="40" height="40" rx="8" fill="url(#cardGradient)" />
+  <text x="68" y="721" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#4A6CF7" text-anchor="middle">AA</text>
+  
+  <!-- 分摊描述 -->
+  <text x="104" y="708" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="#333333">家庭聚餐</text>
+  <text x="104" y="732" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">4人均摊 · 每人 ¥125</text>
+  
+  <!-- 结算按钮 -->
+  <rect x="280" y="704" width="64" height="24" rx="12" fill="#F5F7FA" />
+  <text x="312" y="720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#4A6CF7" text-anchor="middle">结算</text>
+  
+  <!-- 创建按钮 -->
+  <rect x="24" y="772" width="342" height="56" rx="28" fill="url(#buttonGradient)" filter="url(#dropShadow)" />
+  <text x="195" y="808" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle">创建共享账本</text>
+</svg>

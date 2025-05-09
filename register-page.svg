@@ -1,0 +1,84 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景渐变 -->
+    <rect width="390" height="844" fill="url(#paint0_linear)" />
+    
+    <!-- 顶部装饰图形 -->
+    <path d="M-50 150C0 100 100 180 200 120C300 60 350 0 450 50C550 100 600 0 650 50" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+    <path d="M-100 200C-50 150 50 230 150 170C250 110 300 50 400 100C500 150 550 50 600 100" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+    
+    <!-- 登录卡片 -->
+    <rect x="24" y="120" width="342" height="604" rx="24" fill="white" filter="url(#shadow)" />
+    
+    <!-- Logo -->
+    <circle cx="195" cy="180" r="40" fill="url(#paint1_linear)" />
+    <path d="M180 170L195 185L210 170M180 190L195 205L210 190" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- 标题 -->
+    <text x="195" y="260" font-family="'SF Pro Display', sans-serif" font-size="24" font-weight="600" fill="#333333" text-anchor="middle">创建账号</text>
+    <text x="195" y="290" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">加入智慧账本，开启智能理财之旅</text>
+    
+    <!-- 表单 -->
+    <!-- 手机号输入框 -->
+    <rect x="48" y="320" width="294" height="56" rx="12" fill="#F5F7FA" />
+    <text x="68" y="355" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="400" fill="#999999">手机号</text>
+    
+    <!-- 验证码输入框 -->
+    <rect x="48" y="392" width="194" height="56" rx="12" fill="#F5F7FA" />
+    <text x="68" y="427" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="400" fill="#999999">验证码</text>
+    
+    <!-- 获取验证码按钮 -->
+    <rect x="252" y="392" width="90" height="56" rx="12" fill="url(#paint2_linear)" />
+    <text x="297" y="427" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="500" fill="white" text-anchor="middle">获取验证码</text>
+    
+    <!-- 密码输入框 -->
+    <rect x="48" y="464" width="294" height="56" rx="12" fill="#F5F7FA" />
+    <text x="68" y="499" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="400" fill="#999999">设置密码</text>
+    
+    <!-- 确认密码输入框 -->
+    <rect x="48" y="536" width="294" height="56" rx="12" fill="#F5F7FA" />
+    <text x="68" y="571" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="400" fill="#999999">确认密码</text>
+    
+    <!-- 用户协议 -->
+    <circle cx="60" cy="620" r="12" fill="url(#paint1_linear)" />
+    <path d="M54 620L58 624L66 616" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="80" y="625" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="400" fill="#666666">我已阅读并同意</text>
+    <text x="200" y="625" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="500" fill="#4A6CF7">《用户协议》</text>
+    <text x="280" y="625" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="400" fill="#666666">和</text>
+    <text x="300" y="625" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="500" fill="#4A6CF7">《隐私政策》</text>
+    
+    <!-- 注册按钮 -->
+    <rect x="48" y="640" width="294" height="56" rx="28" fill="url(#paint1_linear)" />
+    <text x="195" y="675" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="600" fill="white" text-anchor="middle">注册</text>
+    
+    <!-- 已有账号提示 -->
+    <text x="150" y="720" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="400" fill="#666666">已有账号？</text>
+    <text x="240" y="720" font-family="'SF Pro Display', sans-serif" font-size="14" font-weight="500" fill="#4A6CF7">立即登录</text>
+    
+    <!-- 定义渐变和阴影 -->
+    <defs>
+        <linearGradient id="paint0_linear" x1="0" y1="0" x2="390" y2="844" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#EEF2FF" />
+            <stop offset="1" stop-color="#E6EEFF" />
+        </linearGradient>
+        
+        <linearGradient id="paint1_linear" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4A6CF7" />
+            <stop offset="1" stop-color="#6E8CFF" />
+        </linearGradient>
+        
+        <linearGradient id="paint2_linear" x1="252" y1="392" x2="342" y2="448" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FF9F43" />
+            <stop offset="1" stop-color="#FFBC7D" />
+        </linearGradient>
+        
+        <filter id="shadow" x="20" y="116" width="350" height="612" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="8" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+    </defs>
+</svg>

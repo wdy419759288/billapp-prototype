@@ -1,0 +1,80 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F7FA" />
+      <stop offset="100%" stop-color="#F0F4FF" />
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A6CF7" />
+      <stop offset="100%" stop-color="#6E8CFF" />
+    </linearGradient>
+    <filter id="dropShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4A6CF7" flood-opacity="0.15"/>
+    </filter>
+    <filter id="cardShadow" x="-8" y="-8" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="390" height="844" fill="url(#bgGradient)" />
+  
+  <!-- 顶部装饰图形 -->
+  <path d="M-50 0C0 0 100 20 200 100C300 180 350 150 450 180V0H-50Z" fill="#4A6CF7" fill-opacity="0.05" />
+  <path d="M-30 0C20 0 120 40 220 80C320 120 370 100 470 140V0H-30Z" fill="#4A6CF7" fill-opacity="0.08" />
+  
+  <!-- 登录卡片 -->
+  <rect x="24" y="180" width="342" height="484" rx="24" fill="white" filter="url(#cardShadow)" />
+  
+  <!-- Logo -->
+  <circle cx="195" cy="240" r="40" fill="url(#buttonGradient)" opacity="0.9" />
+  <path d="M177 240L193 256L213 224" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- 标题 -->
+  <text x="195" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="24" font-weight="600" fill="#333333" text-anchor="middle">智慧账本</text>
+  <text x="195" y="350" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">AI驱动的个人财务顾问</text>
+  
+  <!-- 表单 -->
+  <rect x="48" y="390" width="294" height="56" rx="12" fill="#F5F7FA" />
+  <text x="72" y="425" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="15" font-weight="400" fill="#999999">手机号码</text>
+  
+  <rect x="48" y="462" width="294" height="56" rx="12" fill="#F5F7FA" />
+  <text x="72" y="497" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="15" font-weight="400" fill="#999999">密码</text>
+  <rect x="310" y="482" width="20" height="16" rx="2" fill="#999999" opacity="0.5" />
+  
+  <!-- 记住密码 -->
+  <rect x="48" y="534" width="20" height="20" rx="4" fill="#4A6CF7" />
+  <path d="M53 544L58 549L63 539" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="78" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666">记住密码</text>
+  
+  <text x="290" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#4A6CF7">忘记密码?</text>
+  
+  <!-- 登录按钮 -->
+  <rect x="48" y="584" width="294" height="56" rx="28" fill="url(#buttonGradient)" filter="url(#dropShadow)" />
+  <text x="195" y="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="16" font-weight="500" fill="white" text-anchor="middle">登录</text>
+  
+  <!-- 其他登录方式 -->
+  <line x1="48" y1="680" x2="162" y2="680" stroke="#E1E4E8" stroke-width="1" />
+  <text x="195" y="684" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="12" font-weight="400" fill="#999999" text-anchor="middle">其他登录方式</text>
+  <line x1="228" y1="680" x2="342" y2="680" stroke="#E1E4E8" stroke-width="1" />
+  
+  <!-- 社交登录图标 -->
+  <circle cx="155" cy="720" r="24" fill="#F5F7FA" />
+  <text x="155" y="726" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="20" font-weight="400" fill="#666666" text-anchor="middle">W</text>
+  
+  <circle cx="195" cy="720" r="24" fill="#F5F7FA" />
+  <text x="195" y="726" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="20" font-weight="400" fill="#666666" text-anchor="middle">Q</text>
+  
+  <circle cx="235" cy="720" r="24" fill="#F5F7FA" />
+  <text x="235" y="726" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="20" font-weight="400" fill="#666666" text-anchor="middle">A</text>
+  
+  <!-- 底部文字 -->
+  <text x="150" y="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">还没有账号?</text>
+  <text x="240" y="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#4A6CF7" text-anchor="middle">立即注册</text>
+  
+  <!-- 状态栏 -->
+  <rect x="0" y="0" width="390" height="44" fill="transparent" />
+  <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" fill="#333333">9:41</text>
+  <text x="366" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#333333" text-anchor="end">100%</text>
+</svg>
